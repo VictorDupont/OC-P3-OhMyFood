@@ -38,3 +38,70 @@
 		}
 	}
 }
+
+.operation {
+	display: flex;
+	flex-direction: column;
+	align-items: centr;
+	background-color: #fff;
+	padding: 52px 20px 68px 20px;
+
+	h3 {
+		font-size: 20px;
+		float: left;
+		margin-bottom: 32px;
+	}
+}
+
+.step-cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.step-card {
+	display: flex;
+	width: calc(100% - 40px);
+	background-color: #f6f6f6;
+	border-radius: 18px;
+	padding: 32px 0 24px 0;
+	position: relative;
+	margin-bottom: 24px;
+	box-shadow: 0 5px 10px #e5e5e5;
+
+	&__step-number {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 24px;
+		height: 24px;
+		font-size: 12px;
+		border-radius: 12px;
+		background-color: $color-primary;
+		color: #fff;
+		position: relative;
+		left: -12px;
+		margin-right: 11px;
+	}
+
+	&__step {
+		justify-content: center;
+		align-items: center;
+
+		& span {
+			font-size: 14px;
+			font-weight: 700;
+			& i {
+				margin-right: 14px;
+			}
+		}
+	}
+
+	&:hover {
+		background-color: lighten($color-primary, 36%);
+
+		span i {
+			color: $color-primary;
+		}
+	}
+}
