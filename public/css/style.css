@@ -7,6 +7,12 @@
   padding: 0;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   background-color: midnightblue;
   box-sizing: border-box;
@@ -16,14 +22,30 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+
 h2,
 h3 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 19px;
 }
 
+.button {
+  font-size: 12px;
+  color: #fff;
+  padding: 18px 22px 18px 22px;
+  border-radius: 24px;
+  text-decoration: none;
+  box-shadow: 0 5px 10px #c5c5c5;
+}
+.button--primary {
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+}
+
 .navbar {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   display: flex;
@@ -35,6 +57,43 @@ h3 {
 }
 .navbar__logo {
   width: 164px;
+}
+
+.header {
+  width: 100%;
+}
+.header__location {
+  display: flex;
+  height: 45px;
+  background-color: #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+.header__location span i {
+  margin-right: 18px;
+}
+.header__location span {
+  font-weight: 500;
+}
+.header__about {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 43px 0 53px 0;
+}
+.header__about h2 {
+  font-size: 20px;
+  width: calc(100% - 146px);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.header__about p {
+  font-size: 16px;
+  font-weight: 300;
+  width: calc(100% - 70px);
+  text-align: center;
+  margin-bottom: 31px;
 }
 
 /*# sourceMappingURL=style.css.map */
