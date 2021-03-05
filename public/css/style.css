@@ -87,6 +87,9 @@ footer {
   display: block;
   margin-bottom: 10px;
 }
+.footer-links__link:hover {
+  text-decoration: underline;
+}
 .footer-links__link i {
   width: 23px;
   color: #fff;
