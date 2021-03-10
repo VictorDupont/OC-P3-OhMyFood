@@ -264,4 +264,80 @@ footer {
   cursor: pointer;
 }
 
+.main-header {
+  width: 100%;
+  height: 260px;
+}
+.main-header__image {
+  width: 100%;
+  height: 260px;
+}
+
+.menu {
+  position: relative;
+  top: -50px;
+  width: 100%;
+  min-height: 1000px;
+  border-radius: 38px 38px 0 0;
+  background-color: #f6f6f6;
+}
+.menu > .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 39px 20px 35px 20px;
+}
+.menu > .header > .header__restaurant {
+  width: 204px;
+  font-family: "Shrinkhand";
+  font-size: 35px;
+  font-weight: 900;
+  font-style: italic;
+}
+.menu > .header > .header__like {
+  font-size: 21px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.menu > .dish > .dish__title {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  margin-left: 20px;
+}
+.menu > .dish > .dish__separator {
+  width: 40px;
+  border: 3px solid #99e2d0;
+  margin-bottom: 14px;
+  margin-left: 20px;
+}
+.menu > .dish > .dish-choice {
+  display: flex;
+  flex-direction: column;
+  margin: 0 14px 0 14px;
+}
+.menu > .dish > .dish-choice > .dish-proposed {
+  width: calc(100% - 28px);
+  height: 68px;
+  border-radius: 13px;
+  padding: 15px 22px 15px 10px;
+  background-color: #fff;
+}
+.menu > .dish > .dish-choice > .dish-proposed > .dish-proposed__dish-name {
+  font-size: 14px;
+  font-weight: 900;
+  padding-bottom: 12px;
+}
+.menu > .dish > .dish-choice > .dish-proposed > .dish-proposed__dish-informations {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu > .dish > .dish-choice > .dish-proposed > .dish-proposed__dish-informations > .dish-proposed__dish-price {
+  font-size: 12px;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=style.css.map */
