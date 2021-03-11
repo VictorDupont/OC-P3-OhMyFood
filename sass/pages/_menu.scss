@@ -1,3 +1,7 @@
+.navbar-no-shadow {
+	box-shadow: none;
+}
+
 .main-header {
 	width: 100%;
 	height: 260px;
@@ -58,25 +62,28 @@
 
 			& > .dish-proposed {
 				width: calc(100% - 28px);
-				height: 68px;
 				border-radius: 13px;
 				padding: 15px 22px 15px 10px;
 				background-color: #fff;
 
 				& > .dish-proposed__dish-name {
-					font-size: 14px;
+					font-size: 18px;
 					font-weight: 900;
 					padding-bottom: 12px;
 				}
 
-				& > .dish-proposed__dish-informations {
-					font-size: 12px;
+				& > .dish-informations {
 					display: flex;
 					flex-direction: row;
 					justify-content: space-between;
 
-					& > .dish-proposed__dish-price {
-						font-size: 12px;
+					& > .dish-informations__dish-description {
+						font-size: 16px;
+						font-weight: 400;
+					}
+
+					& > .dish-informations__dish-price {
+						font-size: 14px;
 						font-weight: bold;
 					}
 				}

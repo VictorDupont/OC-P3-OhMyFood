@@ -53,7 +53,7 @@ h3 {
   width: 100%;
   height: 63px;
   background-color: #fff;
-  box-shadow: 0px 5px 7px #cfcfcf;
+  box-shadow: 0px 5px 7px #cecece;
 }
 .navbar__logo {
   width: 164px;
@@ -264,6 +264,10 @@ footer {
   cursor: pointer;
 }
 
+.navbar-no-shadow {
+  box-shadow: none;
+}
+
 .main-header {
   width: 100%;
   height: 260px;
@@ -319,24 +323,26 @@ footer {
 }
 .menu > .dish > .dish-choice > .dish-proposed {
   width: calc(100% - 28px);
-  height: 68px;
   border-radius: 13px;
   padding: 15px 22px 15px 10px;
   background-color: #fff;
 }
 .menu > .dish > .dish-choice > .dish-proposed > .dish-proposed__dish-name {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 900;
   padding-bottom: 12px;
 }
-.menu > .dish > .dish-choice > .dish-proposed > .dish-proposed__dish-informations {
-  font-size: 12px;
+.menu > .dish > .dish-choice > .dish-proposed > .dish-informations {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.menu > .dish > .dish-choice > .dish-proposed > .dish-proposed__dish-informations > .dish-proposed__dish-price {
-  font-size: 12px;
+.menu > .dish > .dish-choice > .dish-proposed > .dish-informations > .dish-informations__dish-description {
+  font-size: 16px;
+  font-weight: 400;
+}
+.menu > .dish > .dish-choice > .dish-proposed > .dish-informations > .dish-informations__dish-price {
+  font-size: 14px;
   font-weight: bold;
 }
 
