@@ -264,8 +264,14 @@ footer {
   cursor: pointer;
 }
 
-.navbar-no-shadow {
+.navbar-menu {
   box-shadow: none;
+}
+.navbar-menu > .return {
+  position: absolute;
+  left: 23px;
+  top: 23px;
+  font-size: 16px;
 }
 
 .main-header {
@@ -281,14 +287,15 @@ footer {
   position: relative;
   top: -50px;
   width: 100%;
-  min-height: 1000px;
   border-radius: 38px 38px 0 0;
   background-color: #f6f6f6;
 }
 .menu > .header {
   display: flex;
   justify-content: space-between;
-  padding: 39px 20px 35px 20px;
+  padding: 34px 38px 35px 18px;
+  width: calc(100% - 56px);
+  align-items: center;
 }
 .menu > .header > .header__restaurant {
   width: 204px;
@@ -303,8 +310,11 @@ footer {
   display: flex;
   align-items: center;
 }
+.menu > .dish {
+  margin-bottom: 32px;
+}
 .menu > .dish > .dish__title {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: 9px;
@@ -312,7 +322,7 @@ footer {
 }
 .menu > .dish > .dish__separator {
   width: 40px;
-  border: 3px solid #99e2d0;
+  border: 2px solid #99e2d0;
   margin-bottom: 14px;
   margin-left: 20px;
 }
@@ -324,13 +334,15 @@ footer {
 .menu > .dish > .dish-choice > .dish-proposed {
   width: calc(100% - 28px);
   border-radius: 13px;
-  padding: 15px 22px 15px 10px;
+  padding: 15px 22px 11px 10px;
+  margin-bottom: 15px;
   background-color: #fff;
+  box-shadow: 0 4px 3px -4px #cecece;
 }
 .menu > .dish > .dish-choice > .dish-proposed > .dish-proposed__dish-name {
   font-size: 18px;
-  font-weight: 900;
-  padding-bottom: 12px;
+  font-weight: 500;
+  padding-bottom: 4px;
 }
 .menu > .dish > .dish-choice > .dish-proposed > .dish-informations {
   display: flex;
@@ -338,12 +350,27 @@ footer {
   justify-content: space-between;
 }
 .menu > .dish > .dish-choice > .dish-proposed > .dish-informations > .dish-informations__dish-description {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
 }
 .menu > .dish > .dish-choice > .dish-proposed > .dish-informations > .dish-informations__dish-price {
   font-size: 14px;
   font-weight: bold;
+}
+.menu > .purchase {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 83px;
+}
+.menu > .purchase > .button {
+  font-size: 14px;
+  padding: 15px 50px 15px 50px;
+  box-shadow: 0 3px 4px 1px #cecece;
+}
+
+.footer-menu {
+  position: relative;
+  top: -50px;
 }
 
 /*# sourceMappingURL=style.css.map */

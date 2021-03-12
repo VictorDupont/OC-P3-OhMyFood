@@ -1,5 +1,11 @@
-.navbar-no-shadow {
+.navbar-menu {
 	box-shadow: none;
+	& > .return {
+		position: absolute;
+		left: 23px;
+		top: 23px;
+		font-size: 16px;
+	}
 }
 
 .main-header {
@@ -15,14 +21,15 @@
 	position: relative;
 	top: -50px;
 	width: 100%;
-	min-height: 1000px;
 	border-radius: 38px 38px 0 0;
 	background-color: #f6f6f6;
 
 	& > .header {
 		display: flex;
 		justify-content: space-between;
-		padding: 39px 20px 35px 20px;
+		padding: 34px 38px 35px 18px;
+		width: calc(100% - 56px);
+		align-items: center;
 
 		& > .header__restaurant {
 			width: 204px;
@@ -41,8 +48,9 @@
 	}
 
 	& > .dish {
+		margin-bottom: 32px;
 		& > .dish__title {
-			font-size: 12px;
+			font-size: 16px;
 			font-weight: 400;
 			text-transform: uppercase;
 			margin-bottom: 9px;
@@ -50,7 +58,7 @@
 		}
 		& > .dish__separator {
 			width: 40px;
-			border: 3px solid $color-tertiary;
+			border: 2px solid $color-tertiary;
 			margin-bottom: 14px;
 			margin-left: 20px;
 		}
@@ -63,13 +71,15 @@
 			& > .dish-proposed {
 				width: calc(100% - 28px);
 				border-radius: 13px;
-				padding: 15px 22px 15px 10px;
+				padding: 15px 22px 11px 10px;
+				margin-bottom: 15px;
 				background-color: #fff;
+				box-shadow: 0 4px 3px -4px #cecece;
 
 				& > .dish-proposed__dish-name {
 					font-size: 18px;
-					font-weight: 900;
-					padding-bottom: 12px;
+					font-weight: 500;
+					padding-bottom: 4px;
 				}
 
 				& > .dish-informations {
@@ -78,7 +88,7 @@
 					justify-content: space-between;
 
 					& > .dish-informations__dish-description {
-						font-size: 16px;
+						font-size: 15px;
 						font-weight: 400;
 					}
 
@@ -90,4 +100,21 @@
 			}
 		}
 	}
+
+	& > .purchase {
+		display: flex;
+		justify-content: center;
+		padding-bottom: 83px;
+
+		& > .button {
+			font-size: 14px;
+			padding: 15px 50px 15px 50px;
+			box-shadow: 0 3px 4px 1px #cecece;
+		}
+	}
+}
+
+.footer-menu {
+	position: relative;
+	top: -50px;
 }
