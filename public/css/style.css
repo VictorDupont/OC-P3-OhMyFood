@@ -14,7 +14,7 @@ body {
 }
 
 body {
-  background-color: midnightblue;
+  background-color: #fff;
   box-sizing: border-box;
 }
 
@@ -70,15 +70,17 @@ footer {
   flex-direction: column;
   align-items: flex-start;
 }
+@media screen and (min-width: 768px) {
+  .footer-container {
+    align-items: center;
+  }
+}
 .footer-container__ohmyfood {
   height: 18px;
   filter: invert(100%);
   margin-bottom: 23px;
 }
 
-.footer-links {
-  width: calc(100% - 50px);
-}
 .footer-links__link {
   font-size: 16px;
   font-weight: 500;
@@ -148,6 +150,11 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .step-cards {
+    flex-direction: row;
+  }
+}
 
 .step-card {
   display: flex;
@@ -158,6 +165,13 @@ footer {
   position: relative;
   margin-bottom: 24px;
   box-shadow: 0 5px 10px #e5e5e5;
+}
+@media screen and (min-width: 768px) {
+  .step-card {
+    width: calc(33.3% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 .step-card__step-number {
   display: flex;
@@ -205,6 +219,12 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .restaurant-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 
 .restaurant-card {
   width: calc(100%);
@@ -215,6 +235,18 @@ footer {
   position: relative;
   text-decoration: none;
   color: #000;
+}
+@media screen and (min-width: 768px) {
+  .restaurant-card {
+    width: calc(50% - 18px);
+    margin-left: 9px;
+    margin-right: 9px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .restaurant-card {
+    width: calc(25% - 18px);
+  }
 }
 .restaurant-card__image {
   width: 100%;
@@ -302,7 +334,6 @@ footer {
   align-items: center;
 }
 .menu > .header > .header__restaurant {
-  width: 204px;
   font-family: "Shrinkhand";
   font-size: 35px;
   font-weight: 900;
@@ -335,6 +366,11 @@ footer {
   flex-direction: column;
   margin: 0 14px 0 14px;
 }
+@media screen and (min-width: 1024px) {
+  .menu > .dish > .dish-choice {
+    flex-direction: row;
+  }
+}
 .menu > .dish > .dish-choice > .dish-proposed {
   width: calc(100% - 28px);
   border-radius: 13px;
@@ -342,6 +378,12 @@ footer {
   margin-bottom: 15px;
   background-color: #fff;
   box-shadow: 0 4px 3px -4px #cecece;
+}
+@media screen and (min-width: 1024px) {
+  .menu > .dish > .dish-choice > .dish-proposed {
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+  }
 }
 .menu > .dish > .dish-choice > .dish-proposed > .dish-proposed__dish-name {
   font-size: 18px;

@@ -9,6 +9,10 @@ footer {
 	flex-direction: column;
 	align-items: flex-start;
 
+	@media screen and (min-width: 768px) {
+		align-items: center;
+	}
+
 	&__ohmyfood {
 		height: 18px;
 		filter: invert(100%);
@@ -17,8 +21,6 @@ footer {
 }
 
 .footer-links {
-	width: calc(100% - 50px);
-
 	&__link {
 		font-size: 16px;
 		font-weight: 500;
