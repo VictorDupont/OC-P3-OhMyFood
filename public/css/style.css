@@ -213,6 +213,8 @@ footer {
   margin-bottom: 18px;
   box-shadow: 0 5px 7px #e5e5e5;
   position: relative;
+  text-decoration: none;
+  color: #000;
 }
 .restaurant-card__image {
   width: 100%;
@@ -267,11 +269,13 @@ footer {
 .navbar-menu {
   box-shadow: none;
 }
-.navbar-menu > .return {
+.navbar-menu > .back {
   position: absolute;
   left: 23px;
   top: 23px;
-  font-size: 16px;
+}
+.navbar-menu > .back > a {
+  color: #000;
 }
 
 .main-header {
