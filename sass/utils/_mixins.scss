@@ -1,5 +1,5 @@
 @mixin button {
-	font-size: 12px;
+	font-size: 15px;
 	color: #fff;
 	padding: 18px 22px 18px 22px;
 	border-radius: 24px;
@@ -7,5 +7,14 @@
 	box-shadow: 0 5px 10px #c5c5c5;
 	&--primary {
 		background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+
+		&:hover {
+			background: linear-gradient(
+				to bottom right,
+				lighten($color-secondary, 5%),
+				lighten($color-primary, 5%)
+			);
+			box-shadow: 0 7px 10px #c5c5c5;
+		}
 	}
 }
