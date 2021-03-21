@@ -234,16 +234,9 @@
 			top: 28px;
 			right: 24px;
 			text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+			background-color: transparent;
 			color: #fff;
 			transform: scale(1.2);
-			&:hover {
-				background: linear-gradient(to bottom left, $color-primary, $color-secondary);
-				color: transparent;
-				text-shadow: none;
-				-webkit-background-clip: text;
-				background-clip: text;
-				cursor: pointer;
-			}
 		}
 	}
 }

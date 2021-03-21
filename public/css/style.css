@@ -326,16 +326,9 @@ footer {
   top: 28px;
   right: 24px;
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  background-color: transparent;
   color: #fff;
   transform: scale(1.2);
-}
-.restaurant-card__informations .fa-heart:hover {
-  background: linear-gradient(to bottom left, #9356dc, #ff79da);
-  color: transparent;
-  text-shadow: none;
-  -webkit-background-clip: text;
-  background-clip: text;
-  cursor: pointer;
 }
 
 .navbar-menu {
