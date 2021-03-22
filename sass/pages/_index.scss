@@ -4,15 +4,32 @@
 	align-items: center;
 	height: 100vh;
 	width: 100%;
-	background: #fff;
+	background-image: linear-gradient(to bottom left, $color-primary, $color-secondary);
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 100;
-	animation: loading 1s normal forwards ease-in-out 1s;
+	animation: loading 1s normal forwards ease-in-out 0.5s;
 
-	&__logo {
-		animation: loading__logo 1.7s;
+	@keyframes rotate-forever {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	&__loading-spinner {
+		animation-name: rotate-forever;
+		animation-duration: 0.75s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		height: 37px;
+		width: 37px;
+		border: 5px solid #fff;
+		border-right-color: transparent;
+		border-radius: 50%;
 	}
 }
 
@@ -33,55 +50,69 @@
 }
 
 .header {
-	width: 100%;
 	&__location {
-		display: flex;
-		height: 45px;
 		background-color: #eaeaea;
-		justify-content: center;
-		align-items: center;
 
-		& span i {
-			margin-right: 18px;
-		}
+		& > .container-location {
+			display: flex;
+			height: 45px;
+			justify-content: center;
+			align-items: center;
+			max-width: 1440px;
+			margin: auto;
 
-		& span {
-			font-weight: 500;
+			& span i {
+				margin-right: 18px;
+			}
+
+			& span {
+				font-weight: 500;
+			}
 		}
 	}
 	&__about {
 		background-color: #f6f6f6;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 43px 0 53px 0;
 
-		& h2 {
-			font-size: 24px;
-			width: calc(100% - 144px);
-			text-align: center;
-			margin-bottom: 20px;
-		}
+		& > .container-about {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 43px 0 53px 0;
+			max-width: 1440px;
+			margin: auto;
 
-		& p {
-			font-size: 18px;
-			font-weight: 300;
-			width: calc(100% - 68px);
-			text-align: center;
-			margin-bottom: 31px;
+			& h2 {
+				font-size: 24px;
+				width: calc(100% - 144px);
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			& p {
+				font-size: 18px;
+				font-weight: 300;
+				width: calc(100% - 68px);
+				text-align: center;
+				margin-bottom: 31px;
+			}
 		}
 	}
 }
 
 .operation {
-	display: flex;
-	flex-direction: column;
 	background-color: #fff;
-	padding: 52px 20px 44px 20px;
 
-	h3 {
-		font-size: 24px;
-		margin-bottom: 32px;
+	& > .container-operation {
+		display: flex;
+		flex-direction: column;
+		padding: 52px 20px 44px 20px;
+		max-width: 1440px;
+		margin: auto;
+
+		h3 {
+			font-size: 24px;
+			margin-bottom: 32px;
+		}
 	}
 }
 
@@ -151,11 +182,16 @@
 
 .restaurants {
 	background-color: #f6f6f6;
-	padding: 58px 20px 46px 20px;
 
-	h3 {
-		font-size: 24px;
-		margin-bottom: 27px;
+	& > .container-restaurants {
+		padding: 58px 20px 46px 20px;
+		max-width: 1440px;
+		margin: auto;
+
+		h3 {
+			font-size: 24px;
+			margin-bottom: 27px;
+		}
 	}
 }
 
