@@ -9,8 +9,7 @@
 	top: 0;
 	left: 0;
 	z-index: 100;
-	animation: loading 1s normal forwards ease-in-out;
-	animation-delay: 1s;
+	animation: loading 1s normal forwards ease-in-out 1s;
 
 	&__logo {
 		animation: loading__logo 1.7s;
@@ -229,14 +228,36 @@
 			font-size: 17px;
 		}
 
-		.fa-heart {
+		.far.fa-heart,
+		.fas.fa-heart {
 			position: absolute;
-			top: 28px;
-			right: 24px;
-			text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-			background-color: transparent;
-			color: #fff;
-			transform: scale(1.2);
+			right: 25px;
+			margin-top: 3px;
+			font-size: 27px;
+			color: #3d3d3d;
+			transition: all 0.5s;
+		}
+
+		.fas.fa-heart {
+			opacity: 0;
+
+			&:hover {
+				background: -webkit-linear-gradient(230deg, #9356dc, #ff79da);
+				-webkit-background-clip: text;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+				animation: toTop 0.37s cubic-bezier(0, 0, 0.2, 1) both;
+				animation-name: showSlowly;
+
+				@keyframes showSlowly {
+					0% {
+						opacity: 0;
+					}
+					100% {
+						opacity: 1;
+					}
+				}
+			}
 		}
 	}
 }

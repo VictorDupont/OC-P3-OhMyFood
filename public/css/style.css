@@ -113,8 +113,7 @@ footer {
   top: 0;
   left: 0;
   z-index: 100;
-  animation: loading 1s normal forwards ease-in-out;
-  animation-delay: 1s;
+  animation: loading 1s normal forwards ease-in-out 1s;
 }
 .loader__logo {
   animation: loading__logo 1.7s;
@@ -321,16 +320,66 @@ footer {
 .restaurant-card__informations p {
   font-size: 17px;
 }
-.restaurant-card__informations .fa-heart {
+.restaurant-card__informations .far.fa-heart,
+.restaurant-card__informations .fas.fa-heart {
   position: absolute;
-  top: 28px;
-  right: 24px;
-  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-  background-color: transparent;
-  color: #fff;
-  transform: scale(1.2);
+  right: 25px;
+  margin-top: 3px;
+  font-size: 27px;
+  color: #3d3d3d;
+  transition: all 0.5s;
+}
+.restaurant-card__informations .fas.fa-heart {
+  opacity: 0;
+}
+.restaurant-card__informations .fas.fa-heart:hover {
+  background: -webkit-linear-gradient(230deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: toTop 0.37s cubic-bezier(0, 0, 0.2, 1) both;
+  animation-name: showSlowly;
+}
+@keyframes showSlowly {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  animation: loading 1s normal forwards ease-in-out 1s;
+}
+.loader__logo {
+  animation: loading__logo 1.7s;
+}
+
+@keyframes loading {
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes loading__logo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .navbar-menu {
   box-shadow: none;
 }
@@ -370,14 +419,40 @@ footer {
 .menu > .header > .header__restaurant {
   font-family: "Shrikhand";
   font-size: 35px;
-  font-weight: 900;
+  font-weight: 100;
   font-style: italic;
 }
 .menu > .header > .header__like {
-  font-size: 21px;
-  font-weight: 700;
   display: flex;
   align-items: center;
+}
+.menu > .header > .header__like .far.fa-heart,
+.menu > .header > .header__like .fas.fa-heart {
+  position: absolute;
+  right: 25px;
+  margin-top: 3px;
+  font-size: 30px;
+  color: #3d3d3d;
+  transition: all 0.5s;
+}
+.menu > .header > .header__like .fas.fa-heart {
+  opacity: 0;
+}
+.menu > .header > .header__like .fas.fa-heart:hover {
+  background: -webkit-linear-gradient(230deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: toTop 0.37s cubic-bezier(0, 0, 0.2, 1) both;
+  animation-name: showSlowly;
+}
+@keyframes showSlowly {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .menu > .dish {
   margin-bottom: 32px;
@@ -412,6 +487,47 @@ footer {
   margin-bottom: 15px;
   background-color: #fff;
   box-shadow: 0 4px 3px -4px #cecece;
+  opacity: 0;
+  /*
+  & > .dish-proposed__dish-buy {
+  	display: none;
+  	justify-content: center;
+  	align-items: center;
+  	width: 225px;
+  	height: 100%;
+  	border-radius: 0 13px 13px 0;
+  	background-color: $color-tertiary;
+
+  	& > i {
+  	}
+  }
+
+  &:hover {
+  	.dish-proposed__dish-buy {
+  		display: flex;
+  	}
+  }
+  */
+}
+@keyframes showSlowly {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu > .dish > .dish-choice > .dish-proposed:nth-child(1) {
+  animation: showSlowly 1s linear 2s both;
+}
+.menu > .dish > .dish-choice > .dish-proposed:nth-child(2) {
+  animation: showSlowly 1s linear 3s both;
+}
+.menu > .dish > .dish-choice > .dish-proposed:nth-child(3) {
+  animation: showSlowly 1s linear 4s both;
+}
+.menu > .dish > .dish-choice > .dish-proposed:nth-child(4) {
+  animation: showSlowly 1s linear 5s both;
 }
 @media screen and (min-width: 1024px) {
   .menu > .dish > .dish-choice > .dish-proposed {
