@@ -451,26 +451,6 @@ footer {
   background-color: #fff;
   box-shadow: 0 4px 3px -4px #cecece;
   opacity: 0;
-  /*
-  & > .dish-proposed__dish-buy {
-  	display: none;
-  	justify-content: center;
-  	align-items: center;
-  	width: 225px;
-  	height: 100%;
-  	border-radius: 0 13px 13px 0;
-  	background-color: $color-tertiary;
-
-  	& > i {
-  	}
-  }
-
-  &:hover {
-  	.dish-proposed__dish-buy {
-  		display: flex;
-  	}
-  }
-  */
 }
 @keyframes showSlowly {
   0% {
