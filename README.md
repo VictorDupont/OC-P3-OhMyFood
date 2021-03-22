@@ -4,4 +4,4 @@ OpenClassrooms project 3 : Ohmyfood!
 
 In the next update :
 
--   Finish the site, need to do animations.
+-   Need to do the last animation, on dishes.
