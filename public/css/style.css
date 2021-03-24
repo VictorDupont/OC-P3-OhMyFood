@@ -74,7 +74,7 @@ footer {
   max-width: 1440px;
   margin: auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 376px) {
   .footer-container {
     align-items: center;
   }
@@ -85,6 +85,15 @@ footer {
   margin-bottom: 23px;
 }
 
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 376px) {
+  .footer-links {
+    align-items: center;
+  }
+}
 .footer-links__link {
   font-size: 15px;
   font-weight: 400;
@@ -404,6 +413,7 @@ footer {
   background-color: #f6f6f6;
   position: relative;
   top: -50px;
+  margin-bottom: -50px;
   width: 100%;
   border-radius: 38px 38px 0 0;
 }
@@ -441,6 +451,7 @@ footer {
   font-size: 25px;
   color: #3d3d3d;
   transition: all 0.5s;
+  cursor: pointer;
 }
 .menu > .container-menu > .header > .header__like .fas.fa-heart {
   opacity: 0;
@@ -549,11 +560,6 @@ footer {
   font-size: 14px;
   padding: 15px 50px 15px 50px;
   box-shadow: 0 3px 4px 1px #cecece;
-}
-
-.footer-menu {
-  position: relative;
-  top: -50px;
 }
 
 /*# sourceMappingURL=style.css.map */

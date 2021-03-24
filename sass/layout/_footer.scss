@@ -11,7 +11,7 @@ footer {
 	max-width: 1440px;
 	margin: auto;
 
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 376px) {
 		align-items: center;
 	}
 
@@ -23,6 +23,13 @@ footer {
 }
 
 .footer-links {
+	display: flex;
+	flex-direction: column;
+
+	@media screen and (min-width: 376px) {
+		align-items: center;
+	}
+
 	&__link {
 		font-size: 15px;
 		font-weight: 400;
