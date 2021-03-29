@@ -110,6 +110,7 @@
 			& > .dish-choice {
 				display: flex;
 				flex-direction: column;
+				align-items: center;
 				margin: 0 14px 0 14px;
 
 				@media screen and (min-width: 1024px) {
@@ -117,13 +118,16 @@
 				}
 
 				& > .dish-proposed {
+					display: flex;
+					position: relative;
 					width: calc(100% - 28px);
 					border-radius: 13px;
-					padding: 15px 22px 11px 10px;
+
 					margin-bottom: 15px;
 					background-color: #fff;
 					box-shadow: 0 4px 3px -4px #cecece;
 					opacity: 0;
+					overflow: hidden;
 
 					@keyframes showSlowly {
 						0% {
@@ -152,25 +156,90 @@
 						margin-right: 7.5px;
 					}
 
-					& > .dish-proposed__dish-name {
-						font-size: 18px;
-						font-weight: 500;
-						padding-bottom: 4px;
+					&:hover {
+						.dish-check {
+							display: flex;
+							align-items: center;
+
+							@keyframes imhere {
+								0% {
+									opacity: 0.5;
+									transform: translate(64px, 0);
+								}
+
+								100% {
+									opacity: 1;
+									transform: translate(0px, 0);
+								}
+							}
+
+							i {
+								@keyframes wheel {
+									0% {
+										transform: rotate(180deg);
+									}
+
+									100% {
+										opacity: 1;
+										transform: rotate(0deg);
+									}
+								}
+							}
+						}
+						.dish-informations {
+							animation: imhere 1s;
+						}
+					}
+
+					& > .dish-name {
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						flex: 1;
+						padding: 15px 0px 11px 10px;
+
+						& > .dish-name__name {
+							font-size: 18px;
+							font-weight: 500;
+							padding-bottom: 4px;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+						}
+
+						& > .dish-name__description {
+							font-size: 15px;
+							font-weight: 400;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+						}
 					}
 
 					& > .dish-informations {
 						display: flex;
 						flex-direction: row;
 						justify-content: space-between;
-
-						& > .dish-informations__dish-description {
-							font-size: 15px;
-							font-weight: 400;
-						}
+						padding: 15px 22px 11px 10px;
+						align-items: flex-end;
 
 						& > .dish-informations__dish-price {
-							font-size: 14px;
+							font-size: 16px;
 							font-weight: bold;
+						}
+					}
+
+					& > .dish-check {
+						background-color: $color-tertiary;
+						display: none;
+						position: relative;
+						padding: 0 20px;
+						animation: imhere 1s;
+
+						& > i {
+							font-size: 24px;
+							color: #fff;
+							animation: wheel 1s;
 						}
 					}
 				}

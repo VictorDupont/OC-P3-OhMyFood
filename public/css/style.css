@@ -491,6 +491,7 @@ footer {
 .menu > .container-menu > .dish > .dish-choice {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 14px 0 14px;
 }
 @media screen and (min-width: 1024px) {
@@ -499,13 +500,15 @@ footer {
   }
 }
 .menu > .container-menu > .dish > .dish-choice > .dish-proposed {
+  display: flex;
+  position: relative;
   width: calc(100% - 28px);
   border-radius: 13px;
-  padding: 15px 22px 11px 10px;
   margin-bottom: 15px;
   background-color: #fff;
   box-shadow: 0 4px 3px -4px #cecece;
   opacity: 0;
+  overflow: hidden;
 }
 @keyframes showSlowly {
   0% {
@@ -533,23 +536,76 @@ footer {
     margin-right: 7.5px;
   }
 }
-.menu > .container-menu > .dish > .dish-choice > .dish-proposed > .dish-proposed__dish-name {
+.menu > .container-menu > .dish > .dish-choice > .dish-proposed:hover .dish-check {
+  display: flex;
+  align-items: center;
+}
+@keyframes imhere {
+  0% {
+    opacity: 0.5;
+    transform: translate(64px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0);
+  }
+}
+@keyframes wheel {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+.menu > .container-menu > .dish > .dish-choice > .dish-proposed:hover .dish-informations {
+  animation: imhere 1s;
+}
+.menu > .container-menu > .dish > .dish-choice > .dish-proposed > .dish-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  padding: 15px 0px 11px 10px;
+}
+.menu > .container-menu > .dish > .dish-choice > .dish-proposed > .dish-name > .dish-name__name {
   font-size: 18px;
   font-weight: 500;
   padding-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu > .container-menu > .dish > .dish-choice > .dish-proposed > .dish-name > .dish-name__description {
+  font-size: 15px;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu > .container-menu > .dish > .dish-choice > .dish-proposed > .dish-informations {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-.menu > .container-menu > .dish > .dish-choice > .dish-proposed > .dish-informations > .dish-informations__dish-description {
-  font-size: 15px;
-  font-weight: 400;
+  padding: 15px 22px 11px 10px;
+  align-items: flex-end;
 }
 .menu > .container-menu > .dish > .dish-choice > .dish-proposed > .dish-informations > .dish-informations__dish-price {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
+}
+.menu > .container-menu > .dish > .dish-choice > .dish-proposed > .dish-check {
+  background-color: #99e2d0;
+  display: none;
+  position: relative;
+  padding: 0 20px;
+  animation: imhere 1s;
+}
+.menu > .container-menu > .dish > .dish-choice > .dish-proposed > .dish-check > i {
+  font-size: 24px;
+  color: #fff;
+  animation: wheel 1s;
 }
 .menu > .container-menu > .purchase {
   display: flex;
